@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>iCURIOUS | Blogging Synopsis</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            width: 146px;
+            height: 109px;
+        }
+        .hi
+        {
+            float:right;
+            font-size:20px; 
+            padding-top:40px;
+        }
+        .hi2
+        {
+            float:right;
+            font-size:20px; 
+            padding-top:0px;
+        }
+        a
+        {
+            
+            font-family:Helvetica;
+            text-decoration:none;
+            color:White;
+            
+        }
+        
+    </style>
+</head>
+<body>
+<form id="form2" runat="server">
+    <div>
+    <table class="style1">
+        <tr>
+            <td bgcolor="Black" style="color: #FFFFFF; font-family: Helvetica">
+            
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                <img alt="" class="style2" src="master1.png" /><div class="hi"><b>Welcome <asp:Label ID="lblUname" runat="server" Text=""></asp:Label></b></div></td>
+        </tr>
+        <tr>
+            <td bgcolor="#0073C5">
+            
+            &nbsp;&nbsp;<a href="#">Add-Interests</a>&nbsp;&nbsp;&nbsp;
+    <a href="Bloglist.aspx">Articles</a>&nbsp;&nbsp;&nbsp;
+    <a href="vbm.aspx">Bookmarks</a>&nbsp;&nbsp;&nbsp;
+    <a href="ArticleSubmit.aspx">Submit-Article</a>&nbsp;&nbsp;&nbsp;
+    <a href="Bookmark.aspx">Submit-Bookmark</a>&nbsp;&nbsp;&nbsp;
+   <asp:LinkButton ID="btnLogout" runat="server" onclick="btnLogout_Click">Log-out</asp:LinkButton>
+        </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+        </tr>
+    </table>
+    
+   
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
